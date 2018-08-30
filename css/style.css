@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+img{
+    height: 85vh;
+}
+.menu{
+    height: 80px;
+    background-color: #c3c3c3;
+}
+
+footer{
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #c3c3c3;
+}
