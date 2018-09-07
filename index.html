@@ -20,13 +20,13 @@
                     <img src="imgs/ghost-train-logo.png" alt="Logo" class="img-responsive">
                 </div>
 
-                <form>
+                <form action="php/compraPassagem.php" method="POST" name="comprarPassagem">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="nomeForm" placeholder="Nome completo"></div>
+                                <input type="text" name="nome" class="form-control" id="nomeForm" placeholder="Nome completo"></div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="cpfForm" placeholder="CPF">
+                                <input type="text" name="cpf" class="form-control" id="cpfForm" placeholder="CPF">
                             </div>
                         </div>
                     </div>
@@ -34,14 +34,14 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="date" class="form-control" id="dataForm">
+                                <input type="date" name="data" class="form-control" id="dataForm">
                             </div>
                             <div class="col-md-6">
-                                <select class="form-control" id="pagamentoForm">
+                                <select class="form-control" name="horario" id="pagamentoForm">
                                     <option selected>-- : --</option>
-                                    <option value="1">00:00</option>
-                                    <option value="2">02:20</option>
-                                    <option value="3">03:42</option>
+                                    <option value="00:00">00:00</option>
+                                    <option value="02:20">02:20</option>
+                                    <option value="03:42">03:42</option>
                                 </select>
                             </div>
                         </div>
@@ -49,18 +49,18 @@
                     <div class="form-group">
                         <div class="col-md-6">
                             <label>
-                                <input type="radio" name="optradio" checked> Primeira Classe
+                                <input type="radio" value="1" name="optradio"> Primeira Classe
                             </label>
                         </div>
                         <div class="col-md-6">
                             <label>
-                                <input type="radio" name="optradio" checked> Classe Econômica
+                                <input type="radio" value="2" name="optradio"> Classe Econômica
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" id="pagamentoForm">
-                            <option selected>Forma de Pagamento</option>
+                        <select class="form-control" name="formaPagamento" id="pagamentoForm">
+                            <option disabled selected>Forma de Pagamento</option>
                             <option value="1">Cartão de Débito</option>
                             <option value="2">Cartão de Crédito</option>
                             <option value="3">Boleto</option>
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" id="textoForm" rows="3" placeholder="Observação"></textarea>
+                        <textarea class="form-control" name="observacao" id="textoForm" rows="3" placeholder="Observação"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
